@@ -2,11 +2,7 @@
 
 - [x] Markdownify the copyright string.
 
-1. markdownify the copyright string in config;
-
-2. fold the modified theme info.
-
-- [ ] 2. Display the theme info implicitly.
+- [x] Display the theme info implicitly.
 
 - [ ] 3. RSS, Move the RSS feed from the menu to footer.
 
