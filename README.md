@@ -1,3 +1,33 @@
+# TODO List
+
+- [ ] 1. Markdownify the copyright string.
+
+- [ ] 2. Display the theme info implicitly.
+
+- [ ] 3. RSS, Move the RSS feed from the menu to footer.
+
+- [ ] 4. Add navigators for social links. Enable some social links, eg. facebook, twitter, etc.
+
+- [ ] 5. Enable `leancloud-visitor` in comments partial. Move the `enablevaline` to `params.valine` in configuration.
+
+- [ ] 6. Enable `disableHome` parameter in `FrontMatter`.
+
+- [ ] 7. Change the style of ToC, but uncompleted.
+
+- [ ] 8. Split the layout of categories and tags, show statistics of each tag.
+
+- [ ] 9. Change the style of footer and navigator title.
+
+- [ ] 10. Move the tags to bottom of a post.
+
+- [ ] 11. Change the `underline` to `dashed`.
+
+- [ ] 12. Change the color of hyperlink in post to red.
+
+- [ ] 13.
+
+- [ ] New archive page. Reference page: https://byvoid.com/zhs/blog/archive/. 
+
 # hugo-theme-diary
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
 
