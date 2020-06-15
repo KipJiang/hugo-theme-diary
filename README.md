@@ -4,7 +4,7 @@
 
 - [x] Display the theme info implicitly.
 
-- [ ] 3. RSS, Move the RSS feed from the menu to footer.
+- [x] Add some common Font Awesome icons to sidebar.
 
 - [ ] 4. Add navigators for social links. Enable some social links, eg. facebook, twitter, etc.
 
