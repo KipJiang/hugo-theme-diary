@@ -1,6 +1,10 @@
 # TODO List
 
-- [ ] 1. Markdownify the copyright string.
+- [x] Markdownify the copyright string.
+
+1. markdownify the copyright string in config;
+
+2. fold the modified theme info.
 
 - [ ] 2. Display the theme info implicitly.
 
@@ -24,9 +28,9 @@
 
 - [ ] 12. Change the color of hyperlink in post to red.
 
-- [ ] 13.
+- [ ] 13. New archive page. Reference page: https://byvoid.com/zhs/blog/archive/. 
 
-- [ ] New archive page. Reference page: https://byvoid.com/zhs/blog/archive/. 
+
 
 # hugo-theme-diary
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
