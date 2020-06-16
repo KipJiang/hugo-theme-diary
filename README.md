@@ -24,9 +24,9 @@ $ git checkout kipjiang
 
 - [ ] Change the hover `underline` to `dashed`.
 
-- [ ] Change the color of hyperlink in post to red.
+- [ ] Change the color of hyperlink in post.
 
-- [ ] New archive page. Reference page: https://byvoid.com/zhs/blog/archive/. 
+- [ ] New archive page. Reference page https://byvoid.com/zhs/blog/archive/. 
 
 # hugo-theme-diary
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
