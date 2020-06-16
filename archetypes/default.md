@@ -8,7 +8,7 @@ description: ""
 # images is optional, but needed for showing Twitter Card
 featured_image: ""
 
-author: "Kip Jiang"
+author: "Rainer Chiang"
 draft: false
 comment : true
 disableToC: false
