@@ -1,12 +1,19 @@
 ---
-title: ""
-date: 
+title: "{{ replaceRE "[0-9]{2,}" "" .Name | replaceRE "^-*" "" | replaceRE "-" " " | title }}"
+date: {{ .Date }}
+lastmod: 
+
+slug: ""
 description: ""
-tags: []
-featured_image: ""
 # images is optional, but needed for showing Twitter Card
-images: []
-categories: 
+featured_image: ""
+
+author: "Kip Jiang"
+draft: false
 comment : true
-draft: true
+disableToC: false
+disableAutoCollapse: false
+
+categories: ""
+tags: [""]
 ---
