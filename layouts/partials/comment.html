@@ -10,7 +10,16 @@
 <div id="gitalk-container"></div>
 {{ end }}
 
-{{ if .Site.Params.enableValine }}
+{{ if .Site.Params.valine.enableValine }}
+<div id="valineVisitor">
+    <!-- id 将作为查询条件 -->
+    {{ if and .Site.Params.valine.visitor (ne .Site.BaseURL "http://localhost:1313/") }}
+        <span id="{{ .Permalink | relURL }}" class="leancloud_visitors" data-flag-title="{{ .Title }}">
+            <span class="leancloud-visitors-count"> {{ T "valinePV" }} </span>
+            <p></p>
+        </span>        
+    {{ end }}
+</div>
 <div id="vcomments"></div>
 <!-- Script moved to journal.html -->
 {{ end }}

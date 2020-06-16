@@ -6,27 +6,23 @@
 
 - [x] Add some common Font Awesome icons to sidebar.
 
-- [ ] 4. Add navigators for social links. Enable some social links, eg. facebook, twitter, etc.
+- [x] Enable the visitor counter `leancloud-visitor` of valine and move the `enablevaline` to `params.valine` in configuration.
 
-- [ ] 5. Enable `leancloud-visitor` in comments partial. Move the `enablevaline` to `params.valine` in configuration.
+- [ ] Enable `disableHome` parameter in `FrontMatter`.
 
-- [ ] 6. Enable `disableHome` parameter in `FrontMatter`.
+- [ ] Change the style of ToC.
 
-- [ ] 7. Change the style of ToC, but uncompleted.
+- [ ] Split the layout of categories and tags, show statistics of each tag.
 
-- [ ] 8. Split the layout of categories and tags, show statistics of each tag.
+- [ ] Change the style of footer and navigator title.
 
-- [ ] 9. Change the style of footer and navigator title.
+- [ ] Move the tags info  to the bottom of a post.
 
-- [ ] 10. Move the tags to bottom of a post.
+- [ ] Change the hover `underline` to `dashed`.
 
-- [ ] 11. Change the `underline` to `dashed`.
+- [ ] Change the color of hyperlink in post to red.
 
-- [ ] 12. Change the color of hyperlink in post to red.
-
-- [ ] 13. New archive page. Reference page: https://byvoid.com/zhs/blog/archive/. 
-
-
+- [ ] New archive page. Reference page: https://byvoid.com/zhs/blog/archive/. 
 
 # hugo-theme-diary
 ![](https://img.shields.io/badge/license-MIT-blue.svg)

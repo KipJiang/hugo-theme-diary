@@ -91,12 +91,14 @@ app = new Vue({
         this.handleResize();
         this.mounted = true;
 
-        {{ if and (.Site.Params.enableValine) (.IsPage) }}
+        {{ if and (.Site.Params.valine.enableValine) (.IsPage) }}
             new Valine({
                 el: '#vcomments',
-                appId: {{.Site.Params.valine.appId}},
-                appKey: {{.Site.Params.valine.appKey}},
-                requiredFields: ['nick','mail'],
+                appId: {{ .Site.Params.valine.appId }},
+                appKey: {{ .Site.Params.valine.appKey }},
+                placeholder: {{ .Site.Params.valine.placeholder }},
+                requiredFields: {{ .Site.Params.valine.requiredFields }},
+                visitor: {{ .Site.Params.valine.visitor }},
                 enableQQ: true,
                 recordIP: true,
             })
