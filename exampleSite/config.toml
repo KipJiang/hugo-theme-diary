@@ -1,17 +1,24 @@
 baseURL = "http://example.org/"
 DefaultContentLanguage = "en" # Theme's display language, supports: en, fr, zh, zh-hant
 languageCode = "en-us"
-title = "A Hugo Site"
+title = "My Blog"
 copyright = "This is a customized copyright." # you can use markdown syntax.
-theme = "diary"
-# googleAnalytics = "UA-123-45"
-# enableEmoji = true
+description = "My HomePage Description"  # will set 'og:description'
 
+theme = "diary"
 # Twitter Card and Open Graph settings
 enableOpenGraph = true
 enableTwitterCards = true
-title = "My Blog" # will set 'og:site_name'
-description = "My HomePage Description"  # will set 'og:description'
+# googleAnalytics = "UA-123-45"
+# enableEmoji = true
+
+[params]
+subtitle = "Themed by Diary."
+favicon = "favicon.ico"
+enableMathJax = true
+enableReadingTime=true
+# enableGitalk = true
+# googleSearchCode = "Your Search Code"
 
 [taxonomies]
    tag = "tags"
@@ -40,14 +47,6 @@ weight = 4
 # url = "/archive"
 # name = "Archive"
 # weight = 5
-
-[params]
-subtitle = "Themed by Diary."
-# enableGitalk = true
-favicon = "favicon.ico"
-enableMathJax = true
-enableReadingTime=true
-# googleSearchCode = "Your Search Code"
 
 [params.gitalk]
   owner = "user"
