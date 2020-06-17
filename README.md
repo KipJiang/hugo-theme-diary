@@ -1,3 +1,9 @@
+# Switch to the modified branch
+
+```shell
+$ git clone --single-branch --branch rainer https://github.com/RainerChiang/hugo-theme-diary.git
+```
+
 # hugo-theme-diary
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
 
