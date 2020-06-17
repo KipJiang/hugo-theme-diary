@@ -1,7 +1,7 @@
 # TODO List
 
 ```shell
-$ git checkout kipjiang
+$ git checkout rainer
 ```
 
 - [x] Markdownify the copyright string.
