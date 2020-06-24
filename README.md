@@ -1,7 +1,7 @@
 # Switch to the modified branch
 
 ```shell
-$ git clone --single-branch --branch rainer https://github.com/RainerChiang/hugo-theme-diary.git
+$ git clone --single-branch --branch kipjiang https://github.com/KipJiang/hugo-theme-diary.git
 ```
 
 # hugo-theme-diary
