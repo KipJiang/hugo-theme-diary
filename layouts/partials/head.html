@@ -114,13 +114,13 @@ $(
 {{ end }}
 
 {{ if and (.Site.Params.valine.enableValine) (.IsPage) }}
-<script src='https://unpkg.com/valine@1.4.14/dist/Valine.min.js'></script>
+<!-- <script src='https://unpkg.com/valine@1.4.14/dist/Valine.min.js'></script> -->
+<script src="//cdn1.lncld.net/static/js/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 {{ end }}
 
 {{ if .Site.Params.disqusShortname }}
-<!-- <script src="https://cdn.jsdelivr.net/npm/vue-disqus@3/dist/vue-disqus.js"></script> -->
-<script src="//cdn1.lncld.net/static/js/av-min.js"></script>
-<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-disqus@3/dist/vue-disqus.js"></script>
 {{ end }}
 
 </head>

@@ -5,15 +5,15 @@
     <div class="post-list-container post-list-container-no-background">
         {{range .Paginator.Pages}}
             {{if and (.IsPage) (.Params.date)}}
-            <a href="{{.Permalink}}" class="a-block">
+            <a href="{{ .Permalink }}" class="a-block">
                 <div class="post-item-wrapper">
                     <div class="post-item post-item-no-divider">
                         <div class="post-item-info-wrapper">
                             <div class="post-item-title">
-                                {{.Title}}
+                                {{ .Title }}
                             </div>
                             <div class="post-item-summary">
-                                {{.Description}}
+                                {{ .Description }}
                             </div>
                             {{ partial "post-item-meta.html" . }}
                         </div>
