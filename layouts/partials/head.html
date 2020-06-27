@@ -113,7 +113,8 @@ $(
 </script>
 {{ end }}
 
-{{ if and (.Site.Params.valine.enableValine) (.IsPage) }}
+<!-- if and (.Site.Params.valine.enableValine) (.IsPage) -->
+{{ if .Site.Params.valine.enableValine }}
 <!-- <script src='https://unpkg.com/valine@1.4.14/dist/Valine.min.js'></script> -->
 <script src="//cdn1.lncld.net/static/js/av-min.js"></script>
 <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
