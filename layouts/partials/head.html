@@ -11,22 +11,6 @@
 <meta name="renderer" content="webkit">
 <meta name="theme-color" content="#ffffff">
 
-<!-- open-graph -->
-{{if .Site.Params.enableOpenGraph}}
-{{ template "_internal/opengraph.html" . }}
-{{end}}
-
-<!-- twitter-cards -->
-{{if .Site.Params.enableTwitterCards}}
-{{ template "_internal/twitter_cards.html" . }}
-{{end}}
-
-<!-- metadata -->
-
-{{ if .Site.GoogleAnalytics }}
-{{ template "_internal/google_analytics.html" . }}
-{{ end }}
-
 <script src="{{"/vendor/js/jquery.min.js" | relURL}}" ></script>
 <script src="{{"/vendor/js/popper.min.js" | relURL}}" ></script>
 <script src="{{"/vendor/js/bootstrap.min.js" | relURL}}" ></script>
@@ -34,17 +18,7 @@
 <link type="text/css" rel="stylesheet" href="{{"/vendor/css/bootstrap.min.css" | relURL}}">
 <script src="{{"/vendor/js/vue.min.js" | relURL}}" ></script>
 
-<!--  -->
-{{if .Site.Params.manifest}}
-<link rel="manifest" href="{{.Site.Params.manifest}}">
-{{end}}
-
-<!-- favicon -->
-{{ if .Site.Params.favicon }}
-<link rel="icon" href="{{ .Site.Params.favicon }}">
-{{ end }}
-
-<!-- scss style start -->
+<!-- SCSS style start -->
 {{ $styles := resources.Get "scss/style.scss" | toCSS | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 
@@ -57,9 +31,41 @@
 <script>
   loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
 </script>
-<!-- scss style end -->
 
-<!-- Parameters Custom -->
+<!-- Font Awesome -->
+<!--国内推荐 CDN <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css"> -->
+<!--海外推荐 CDN <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+<link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+<!-- SCSS style end -->
+
+<!-- comments start -->
+<!-- if and (.Site.Params.valine.enableValine) (.IsPage) -->
+{{ if .Site.Params.valine.enableValine }}
+<!-- <script src='https://unpkg.com/valine@1.4.14/dist/Valine.min.js'></script> -->
+<script src="//cdn1.lncld.net/static/js/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+{{ end }}
+
+{{ if .Site.Params.disqusShortname }}
+<script src="https://cdn.jsdelivr.net/npm/vue-disqus@3/dist/vue-disqus.js"></script>
+{{ end }}
+
+<!-- comments end -->
+
+<!-- Parameters Custom start -->
+{{if .Site.Params.enableOpenGraph}}
+{{ template "_internal/opengraph.html" . }}
+{{end}}
+
+{{if .Site.Params.enableTwitterCards}}
+{{ template "_internal/twitter_cards.html" . }}
+{{end}}
+
+{{ if .Site.GoogleAnalytics }}
+{{ template "_internal/google_analytics.html" . }}
+{{ end }}
+
 {{ if .Site.Params.enableMathJax }}
   {{ partial "mathjax.html" . }}
 {{ end }}
@@ -72,40 +78,14 @@
   {{ end }}
 {{ end }}
 
-<!-- Font Awesome -->
-<!--国内推荐 CDN-->
-<!-- <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css"> -->
-<!--海外推荐 CDN-->
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-<link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-
-<!-- comments -->
-{{ if and (.Site.Params.livereId) (.IsPage) }}
-<script type="text/javascript">
-$(
-  (function(d, s) {
-      var j, e = d.getElementsByTagName(s)[0];
-
-      if (typeof LivereTower === 'function') { return; }
-
-      j = d.createElement(s);
-      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-      j.async = true;
-
-      e.parentNode.insertBefore(j, e);
-  })(document, 'script'));
-</script>
+{{ if .Site.Params.favicon }}
+<link rel="icon" href="{{ .Site.Params.favicon }}">
 {{ end }}
 
-<!-- if and (.Site.Params.valine.enableValine) (.IsPage) -->
-{{ if .Site.Params.valine.enableValine }}
-<!-- <script src='https://unpkg.com/valine@1.4.14/dist/Valine.min.js'></script> -->
-<script src="//cdn1.lncld.net/static/js/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-{{ end }}
+<!--  -->
+{{if .Site.Params.manifest}}
+<link rel="manifest" href="{{.Site.Params.manifest}}">
+{{end}}
 
-{{ if .Site.Params.disqusShortname }}
-<script src="https://cdn.jsdelivr.net/npm/vue-disqus@3/dist/vue-disqus.js"></script>
-{{ end }}
-
+<!-- Parameters Custom end -->
 </head>

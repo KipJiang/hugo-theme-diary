@@ -218,15 +218,6 @@ a {
   opacity: 0;
 }
 
-// dirty hack for livere
-#lv-container {
-  padding: 0 30px;
-
-  @media screen and (max-width: $single-column-max-width) {
-    padding: 0 15px;
-  }
-}
-
 .single-column-nav-container {
   display: none !important;
   @media screen and (max-width: $single-column-max-width) {

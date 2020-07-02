@@ -19,9 +19,3 @@
 <div id="vcomments"></div>
 <!-- Script moved to journal.html -->
 {{ end }}
-
-{{ if .Site.Params.livereId }}
-<div id="lv-container" data-id="city" data-uid={{.Site.Params.livereId}}>
-	<noscript>{{ i18n "comments_activate_js" }}</noscript>
-</div>
-{{ end }}
