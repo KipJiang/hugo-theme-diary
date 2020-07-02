@@ -17,7 +17,6 @@ subtitle = "Themed by Diary."
 favicon = "favicon.ico"
 enableMathJax = true
 enableReadingTime=true
-# enableGitalk = true
 # googleSearchCode = "Your Search Code"
 
 [taxonomies]
@@ -47,12 +46,6 @@ weight = 4
 # url = "/archive"
 # name = "Archive"
 # weight = 5
-
-[params.gitalk]
-  owner = "user"
-  repo = "repo name"
-  client_id = "your client id"
-  client_secret = "your client secret"
 
 [params.valine]
 enableValine = false

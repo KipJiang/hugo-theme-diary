@@ -34,16 +34,18 @@
 <link type="text/css" rel="stylesheet" href="{{"/vendor/css/bootstrap.min.css" | relURL}}">
 <script src="{{"/vendor/js/vue.min.js" | relURL}}" ></script>
 
+<!--  -->
 {{if .Site.Params.manifest}}
 <link rel="manifest" href="{{.Site.Params.manifest}}">
 {{end}}
 
+<!-- favicon -->
 {{ if .Site.Params.favicon }}
 <link rel="icon" href="{{ .Site.Params.favicon }}">
-<!-- favicon -->
 {{ end }}
 
-{{ $styles := resources.Get "scss/journal.scss" | toCSS | minify | fingerprint }}
+<!-- scss style start -->
+{{ $styles := resources.Get "scss/style.scss" | toCSS | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 
 {{ if not .Site.Params.disableDarkmode }}
@@ -51,11 +53,13 @@
 <link rel="stylesheet" href="{{ $darkmode.Permalink }}" integrity="{{ $darkmode.Data.Integrity }}" media="screen">
 {{ end }}
 
-<script src="{{.Site.BaseURL}}/js/loadCSS.js"></script>
+<script src="{{ .Site.BaseURL }}/js/loadCSS.js"></script>
 <script>
   loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
 </script>
+<!-- scss style end -->
 
+<!-- Parameters Custom -->
 {{ if .Site.Params.enableMathJax }}
   {{ partial "mathjax.html" . }}
 {{ end }}
@@ -76,26 +80,6 @@
 <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 
 <!-- comments -->
-{{ if and (.Site.Params.enableGitalk) (.IsPage) }}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="{{"/vendor/js/md5.min.js" | relURL}}"></script>
-<script>
-  var gitalk = new Gitalk({
-  clientID: '{{ .Site.Params.Gitalk.client_id }}',
-  clientSecret: '{{ .Site.Params.Gitalk.client_secret }}',
-  repo: '{{ .Site.Params.Gitalk.repo }}',
-  owner: '{{ .Site.Params.Gitalk.owner }}',
-  admin: ['{{ .Site.Params.Gitalk.owner }}'],
-  id: md5(location.pathname),
-  distractionFreeMode: 'false'
-  });
-  window.onload = function () {
-        gitalk.render('gitalk-container')
-  }
-</script>
-{{ end }}
-
 {{ if and (.Site.Params.livereId) (.IsPage) }}
 <script type="text/javascript">
 $(
