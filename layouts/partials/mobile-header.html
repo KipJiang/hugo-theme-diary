@@ -41,21 +41,24 @@
     <div ref="navBackground" class="nav-background"></div>
     <div class="container container-narrow nav-content">
         <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
-            <i class="material-icons">
+            <!-- <i class="material-icons">
                 menu
-            </i>
+            </i> -->
+            <i class="fas fa-bars"></i>
         </button>
         <a ref="navTitle" class="navbar-brand" href="{{.Site.BaseURL}}">
             {{.Site.Title}}
         </a>
         {{ if not .Site.Params.disableDarkMode }}
         <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
-            <i class="material-icons" v-if="isDarkMode">
+            <!-- <i class="material-icons" v-if="isDarkMode">
                 brightness_4
-            </i>
-            <i class="material-icons" v-else="isDarkMode">
+            </i> -->
+            <i class="fas fa-moon pagination-action-icon" v-if="isDarkMode" style=""></i>
+            <!-- <i class="material-icons" v-else="isDarkMode">
                 brightness_7
-            </i>
+            </i> -->
+            <i class="fas fa-sun pagination-action-icon" v-else="isDarkMode" style=""></i>
         </button>
         {{ end }}
     </div>
