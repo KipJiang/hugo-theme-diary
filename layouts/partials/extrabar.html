@@ -10,24 +10,15 @@
     {{ end }}
     <div class="pagination">
         <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
-            <!-- <i class="material-icons pagination-action-icon">
-                keyboard_arrow_up
-            </i> -->
-            <i class="fas fa-chevron-up pagination-action-icon" style=""></i>
-            <!-- <i class="fas fa-angle-double-up pagination-action-icon" style="font-size: large"></i> -->
+            <i class="fas fa-chevron-up pagination-action-icon"></i>
         </a>
         {{ if not .Site.Params.disableDarkMode }}
         <a class="pagination-action" v-on:click="toggleDarkMode">
-            <!-- <i class="material-icons pagination-action-icon" v-if="isDarkMode">
-                brightness_4
-            </i> -->
-            <i class="fas fa-moon pagination-action-icon" v-if="isDarkMode" style=""></i>
-            <!-- <i class="material-icons pagination-action-icon" v-else="isDarkMode">
-                brightness_7
-            </i> -->
-            <i class="fas fa-sun pagination-action-icon" v-else="isDarkMode" style=""></i>
+            <i class="fas fa-moon pagination-action-icon" v-if="isDarkMode"></i>
+            <i class="fas fa-sun pagination-action-icon" v-else="isDarkMode"></i>
         </a>
         {{ end }}
+
         {{ if .Paginator }}
         {{ if gt .Paginator.TotalPages 1 }}
             <div class="pagination-indicator">
@@ -37,20 +28,14 @@
             </div>
             
             {{ if .Paginator.HasPrev }}
-            <a class="pagination-action" href="{{.Paginator.Prev.URL}}">
-                <!-- <i class="material-icons pagination-action-icon">
-                    chevron_left
-                </i> -->
-                <i class="fas fa-chevron-left pagination-action-icon" style=""></i>
+            <a class="pagination-action" href="{{ .Paginator.Prev.URL }}">
+                <i class="fas fa-chevron-left pagination-action-icon"></i>
             </a>
             {{ end }}
 
             {{ if .Paginator.HasNext }}
-            <a class="pagination-action" href="{{.Paginator.Next.URL}}">
-                <!-- <i class="material-icons pagination-action-icon">
-                    chevron_right
-                </i> -->
-                <i class="fas fa-chevron-right pagination-action-icon" style=""></i>
+            <a class="pagination-action" href="{{ .Paginator.Next.URL }}">
+                <i class="fas fa-chevron-right pagination-action-icon"></i>
             </a>
             {{ end }}
         {{ end }}

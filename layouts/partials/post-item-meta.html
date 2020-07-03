@@ -3,8 +3,7 @@
     &emsp;
     <!-- Reading Time Start -->
     {{ if .Site.Params.enableReadingTime }}
-        <!-- <i class="material-icons" style="font-size:10px">schedule</i> -->
-        <i class="far fa-clock" style=""></i>
+        <i class="far fa-clock"></i>
         {{ $readTime := mul (div (countwords .Content) 220.0) 60 }}
 
         {{ $minutes := math.Floor (div $readTime 60) }}
@@ -16,6 +15,7 @@
         {{ $seconds }} {{ cond (eq $seconds 1) "second" "s" }}
     {{ end }}
     <!-- Reading Time End -->
+    
     <!-- Valine Vistors Start -->
     {{ if .Site.Params.valine.visitor }}
     &emsp;

@@ -3,7 +3,7 @@
     <div class="drawer-content">
         <div class="drawer-menu">
             {{ if and (isset .Site.Params "googlesearchcode") (.IsHome) }}
-            <script async src="https://cse.google.com/cse.js?cx={{.Site.Params.googleSearchCode}}"></script>
+            <script async src="https://cse.google.com/cse.js?cx={{ .Site.Params.googleSearchCode }}"></script>
             <div class="gcse-search" mobileLayout="true"></div>
             {{ end }}
             {{ $current := .Permalink | absLangURL }}
@@ -41,23 +41,14 @@
     <div ref="navBackground" class="nav-background"></div>
     <div class="container container-narrow nav-content">
         <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
-            <!-- <i class="material-icons">
-                menu
-            </i> -->
             <i class="fas fa-bars"></i>
         </button>
-        <a ref="navTitle" class="navbar-brand" href="{{.Site.BaseURL}}">
+        <a ref="navTitle" class="navbar-brand" href="{{ .Site.BaseURL }}">
             {{.Site.Title}}
         </a>
         {{ if not .Site.Params.disableDarkMode }}
         <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
-            <!-- <i class="material-icons" v-if="isDarkMode">
-                brightness_4
-            </i> -->
             <i class="fas fa-moon pagination-action-icon" v-if="isDarkMode" style=""></i>
-            <!-- <i class="material-icons" v-else="isDarkMode">
-                brightness_7
-            </i> -->
             <i class="fas fa-sun pagination-action-icon" v-else="isDarkMode" style=""></i>
         </button>
         {{ end }}
@@ -65,7 +56,7 @@
 </nav>
 <div class="single-column-header-container" ref="pageHead"
      v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
-    <a href="{{.Site.BaseURL}}">
+    <a href="{{ .Site.BaseURL }}">
         <div class="single-column-header-title">{{.Site.Title}}</div>
         {{ with .Site.Params.subtitle }}
         <div class="single-column-header-subtitle">{{.}}</div>
