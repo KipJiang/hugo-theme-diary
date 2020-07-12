@@ -12,9 +12,11 @@
                             <div class="post-item-title">
                                 {{ .Title }}
                             </div>
+                            {{ if .Site.Params.metaDescription }}
                             <div class="post-item-summary">
                                 {{ .Description }}
                             </div>
+                            {{ end }}
                             {{ partial "post-item-meta.html" . }}
                         </div>
                         {{ $featured_image := .Params.featured_image }}

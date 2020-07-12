@@ -94,6 +94,7 @@ app = new Vue({
         {{ if and (.Site.Params.valine.enableValine) (.IsPage) }}
             new Valine({
                 el: '#vcomments',
+                lang: {{ .Site.Params.valine.lang }},
                 appId: {{ .Site.Params.valine.appId }},
                 appKey: {{ .Site.Params.valine.appKey }},
                 placeholder: {{ .Site.Params.valine.placeholder }},
